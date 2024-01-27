@@ -29,8 +29,19 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # github cli
-    gh
+    gh # github cli
+    nodejs
+
+    # bevy dependencies
+    pkg-config
+    alsa-lib
+    alsa-utils
+    vulkan-loader
+    wayland
+    udev
+    libxkbcommon
+    libudev-zero
+    xorg.libX11 xorg.libXcursor xorg.libXi xorg.libXrandr
 
     neofetch
     nnn # terminal file manager
@@ -40,6 +51,15 @@
     xz
     unzip
     p7zip
+
+    #benchmarking
+    geekbench
+
+    #gaming
+    steam
+    lutris
+    wine
+    discord
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
