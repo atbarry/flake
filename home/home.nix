@@ -20,6 +20,13 @@
   #     xxx
   # '';
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
+
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # github cli

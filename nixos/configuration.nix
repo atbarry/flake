@@ -103,6 +103,8 @@
     rustup
     mold
     neovim
+    gcc
+    clang
     wget
   ];
 

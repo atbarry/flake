@@ -24,7 +24,6 @@
     ...
   } @ inputs: let 
     inherit (self) outputs;
-    pkgs = nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
