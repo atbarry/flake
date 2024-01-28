@@ -30,6 +30,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     gh # github cli
+    git-credential-manager
     nodejs
 
     # bevy dependencies
@@ -46,6 +47,9 @@
     neofetch
     nnn # terminal file manager
 
+    # coding
+    jetbrains.idea-ultimate
+
     # archives
     zip
     xz
@@ -60,6 +64,7 @@
     lutris
     wine
     discord
+    noisetorch
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
@@ -118,12 +123,15 @@
     usbutils # lsusb
   ];
 
-  # basic configuration of git, please change to your own
+  # basic configuration of git
   programs.git = {
     enable = true;
-    userName = "atbarry";
-    userEmail = "albarry465@gmail.com";
     extraConfig.init.defaultBranch = "main";
+    userName  = "atbarry";
+    userEmail = "albarry465@gmail.com";
+    aliases = {
+      cm = "commit -m";
+    };
   };
 
   # starship - an customizable prompt for any shell
