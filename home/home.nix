@@ -65,6 +65,8 @@
     wine
     discord
     noisetorch
+    mangohud
+    gamemode
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
