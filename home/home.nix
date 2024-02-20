@@ -47,8 +47,17 @@
     neofetch
     nnn # terminal file manager
 
+    # browser
+    firefox
+    qbittorrent
+
     # coding
     jetbrains.idea-ultimate
+    jdk21
+    just # save and run project-specific commands
+
+    # documents
+    typst
 
     # archives
     zip
@@ -67,6 +76,9 @@
     noisetorch
     mangohud
     gamemode
+    obs-studio
+    yuzu-early-access
+    dolphin-emu
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
