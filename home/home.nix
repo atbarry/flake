@@ -58,6 +58,7 @@
 
     # documents
     typst
+    typst-lsp
 
     # archives
     zip
@@ -135,7 +136,12 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    # fonts
+    (nerdfonts.override { fonts = [ "FiraCode" "Iosevka" "JetBrainsMono"]; })
   ];
+
+
 
   # basic configuration of git
   programs.git = {
@@ -158,14 +164,28 @@
       gcloud.disabled = true;
       line_break.disabled = true;
     };
+
   };
 
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
   programs.kitty = {
     enable = true;
+    font = {
+      name = "Iosevka";
+      size = 12;
+    };
     # custom settings
     settings = { };
   };
+
+  # vscode stuff
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscode.fhs;
+  };
+
+  # required to autoload fonts installed with Home Manager
+  fonts.fontconfig.enable = true;
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
