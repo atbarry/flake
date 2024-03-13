@@ -103,6 +103,7 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    python3
     rustup
     mold
     neovim
