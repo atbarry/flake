@@ -85,6 +85,8 @@
     pulse.enable = true;
   };
 
+  # setup postgres
+  services.postgresql.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alex = {
@@ -101,7 +103,6 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-    git
     rustup
     mold
     neovim
@@ -115,8 +116,9 @@
     defaultEditor = true;
   };
 
-  programs.fish.enable = true;
   programs.steam.enable = true;
+  programs.nix-ld.enable = true;
+  programs.fish.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

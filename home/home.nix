@@ -29,8 +29,17 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    # meetings / productivity
+    telegram-desktop
+    openvpn
+    protonvpn-gui
+    zoom-us
+
+    # investing
+    tradingview
+    ledger-live-desktop
+
     gh # github cli
-    git-credential-manager
     nodejs
 
     # bevy dependencies
@@ -141,8 +150,6 @@
     (nerdfonts.override { fonts = [ "FiraCode" "Iosevka" "JetBrainsMono"]; })
   ];
 
-
-
   # basic configuration of git
   programs.git = {
     enable = true;
@@ -164,7 +171,17 @@
       gcloud.disabled = true;
       line_break.disabled = true;
     };
+  };
 
+
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      cat "shell is working!"
+    '';
+  };
+  programs.zoxide = {
+    enable = true;
   };
 
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
