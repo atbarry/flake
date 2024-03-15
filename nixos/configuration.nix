@@ -27,6 +27,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Getting amd gpu cycles blender
+  systemd.tmpfiles.rules = [
+    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  ];
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -118,8 +123,14 @@
   };
 
   programs.steam.enable = true;
-  programs.nix-ld.enable = true;
   programs.fish.enable = true;
+
+  # enable nix-ld for pip and friends
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib # numpy
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

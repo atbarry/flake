@@ -62,8 +62,12 @@
 
     # coding
     jetbrains.idea-ultimate
+    jetbrains.pycharm-professional
     jdk21
     just # save and run project-specific commands
+    blender-hip
+
+    pdm # python package manager
 
     # documents
     typst
