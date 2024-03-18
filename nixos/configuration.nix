@@ -27,10 +27,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Playing the finals
+  boot.kernelParams = [ "clearcpuid=304" ];
+
   # Getting amd gpu cycles blender
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  hardware.opengl.extraPackages = with pkgs; [
+    rocmPackages.clr.icd
   ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -60,11 +64,15 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  # make ledger work
+  hardware.ledger.enable = true;
+
   # enable flatpak
   services.flatpak.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -108,6 +116,7 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    blender-hip
     python3
     rustup
     mold

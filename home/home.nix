@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # TODO please change the username & home direcotry to your own
@@ -21,6 +21,9 @@
   # '';
 
   nixpkgs = {
+    overlays = [
+      
+    ];
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
@@ -30,6 +33,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # meetings / productivity
+    signal-desktop
     telegram-desktop
     openvpn
     protonvpn-gui
@@ -37,7 +41,6 @@
 
     # investing
     tradingview
-    ledger-live-desktop
 
     gh # github cli
     nodejs
@@ -65,7 +68,6 @@
     jetbrains.pycharm-professional
     jdk21
     just # save and run project-specific commands
-    blender-hip
 
     pdm # python package manager
 
@@ -152,6 +154,8 @@
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" "Iosevka" "JetBrainsMono"]; })
+
+    ledger-live-desktop
   ];
 
   # basic configuration of git
@@ -217,6 +221,9 @@
   # the home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "23.11";
+
+   # Nicely reload system units when changing configs
+  systemd.user.startServices = "sd-switch";
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
