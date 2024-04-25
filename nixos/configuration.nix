@@ -117,7 +117,7 @@
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
     blender-hip
-    python3
+    python3Full
     rustup
     mold
     neovim
