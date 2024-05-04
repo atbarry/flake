@@ -63,11 +63,15 @@
     firefox
     qbittorrent
 
+    # keyboard
+    wally-cli
+
     # coding
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
     jdk21
     just # save and run project-specific commands
+    qemu # virtual machine
 
     pdm # python package manager
 
@@ -95,6 +99,7 @@
     obs-studio
     yuzu-early-access
     dolphin-emu
+    dwarf-fortress
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
