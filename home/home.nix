@@ -43,6 +43,7 @@
     tradingview
 
     gh # github cli
+    gitkraken
     nodejs
 
     # bevy dependencies
@@ -71,7 +72,10 @@
     jetbrains.pycharm-professional
     jdk21
     just # save and run project-specific commands
-    qemu # virtual machine
+
+    # virtual machine
+    qemu
+    quickemu
 
     pdm # python package manager
 
