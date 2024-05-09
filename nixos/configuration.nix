@@ -107,7 +107,6 @@
     description = "Alex";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      google-chrome
       kitty
       xclip
     ];
@@ -124,6 +123,7 @@
     gcc
     clang
     wget
+    appimage-run
   ];
 
   programs.neovim = {

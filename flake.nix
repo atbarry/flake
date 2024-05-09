@@ -19,6 +19,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let 
@@ -41,7 +42,19 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <
-        modules = [./home/home.nix];
+        modules = [
+          ./home/home.nix
+          {
+            nixpkgs.overlays = [
+              (final: prev: {
+                unstable = import nixpkgs-unstable {
+                  system = prev.system;
+                  config.allowUnfree = true;
+                };
+              })
+            ];
+          }
+        ];
       };
     };
   };

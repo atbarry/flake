@@ -61,7 +61,8 @@
     nnn # terminal file manager
 
     # browser
-    firefox
+    unstable.firefox
+    google-chrome
     qbittorrent
 
     # keyboard
