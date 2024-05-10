@@ -33,8 +33,6 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # meetings / productivity
-    signal-desktop
-    telegram-desktop
     openvpn
     protonvpn-gui
     zoom-us
@@ -139,6 +137,7 @@
     iftop # network monitoring
     powertop # power monitoring
     nvtop # gpu monitoring
+    sniffnet # network trafic monitoring
 
     # system call monitoring
     strace # system call monitoring
