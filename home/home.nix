@@ -110,7 +110,6 @@
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
     yq-go # yaml processer https://github.com/mikefarah/yq
-    eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
 
     # misc
@@ -177,10 +176,18 @@
     '';
     shellAliases = {
       ls = "eza";
+      cd = "z";
+      cdi = "zi";
     };
   };
+
   programs.zoxide = {
     enable = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    icons = true;
   };
 
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
