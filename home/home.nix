@@ -71,6 +71,7 @@
     # coding
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
+    unstable.zed-editor
     jdk21
     just # save and run project-specific commands
 
@@ -102,7 +103,6 @@
     mangohud
     gamemode
     obs-studio
-    yuzu-early-access
     dolphin-emu
     dwarf-fortress
 
@@ -123,6 +123,7 @@
     gawk
     zstd
     gnupg
+    eza # better ls
 
     # nix related
     #
@@ -174,6 +175,9 @@
     interactiveShellInit = ''
       cat "shell is working!"
     '';
+    shellAliases = {
+      ls = "eza";
+    };
   };
   programs.zoxide = {
     enable = true;
