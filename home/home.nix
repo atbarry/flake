@@ -188,6 +188,9 @@
   programs.eza = {
     enable = true;
     icons = true;
+    extraOptions = [
+      "--git-ignore"
+    ];
   };
 
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
