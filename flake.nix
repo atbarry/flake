@@ -37,6 +37,7 @@
     
     # Custom packages and modifications, exported as overlays
     overlays = import ./overlays {inherit inputs;};
+    nixpkgs-unstable = nixpkgs-unstable;
 
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {

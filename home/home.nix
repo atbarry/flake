@@ -24,6 +24,12 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
+      (final: prev: {
+        unstable = import outputs.nixpkgs-unstable {
+          system = prev.system;
+          config.allowUnfree = true;
+        };
+      })
     ];
     config = {
       allowUnfree = true;
@@ -33,6 +39,9 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    #
+    supercell-wx
+
     # meetings / productivity
     openvpn
     protonvpn-gui

@@ -1,3 +1,3 @@
-{pkgs ? import <nixpkgs> {}, ...}: {
+pkgs: {
   supercell-wx = pkgs.callPackage ./supercell-wx;
 }
