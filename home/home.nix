@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, outputs, ... }:
 
 {
   # TODO please change the username & home direcotry to your own
@@ -22,7 +22,8 @@
 
   nixpkgs = {
     overlays = [
-      
+      outputs.overlays.additions
+      outputs.overlays.modifications
     ];
     config = {
       allowUnfree = true;

@@ -55,16 +55,6 @@
         # > Our main home-manager configuration file <
         modules = [
           ./home/home.nix
-          {
-            nixpkgs.overlays = [
-              (final: prev: {
-                unstable = import nixpkgs-unstable {
-                  system = prev.system;
-                  config.allowUnfree = true;
-                };
-              })
-            ];
-          }
         ];
       };
     };
