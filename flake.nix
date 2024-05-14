@@ -24,9 +24,20 @@
     ...
   } @ inputs: let 
     inherit (self) outputs;
+
+    # Supported systems for my flakes
+    systems = [
+      "x86_64-linux"
+    ];
+
+    forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
+    # Custom packages
+    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+    
+    # Custom packages and modifications, exported as overlays
+    overlays = import ./overlays {inherit inputs;};
+
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
