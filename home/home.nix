@@ -56,9 +56,6 @@
     # investing
     tradingview
 
-    # Computer peripherals
-    ckb-next
-
     gh # github cli
     gitkraken
     nodejs
