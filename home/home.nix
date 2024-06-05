@@ -39,6 +39,13 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    # radar project
+    osmium-tool
+    gpxsee
+    qgis
+
+    # custom packages
+    nix-inspect
     supercell-wx
 
     # meetings / productivity
@@ -48,6 +55,9 @@
 
     # investing
     tradingview
+
+    # Computer peripherals
+    ckb-next
 
     gh # github cli
     gitkraken
@@ -141,12 +151,10 @@
     hugo # static site generator
     glow # markdown previewer in terminal
 
-    btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
-    powertop # power monitoring
-    nvtop # gpu monitoring
-    sniffnet # network trafic monitoring
+    # Monitoring tools
+    btop
+    nvtop
+    sniffnet
 
     # system call monitoring
     strace # system call monitoring
