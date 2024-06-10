@@ -202,7 +202,7 @@
     enable = true;
     icons = true;
     extraOptions = [
-      "--git-ignore"
+      # "--git-ignore"
     ];
   };
 
