@@ -72,6 +72,7 @@
     xorg.libX11 xorg.libXcursor xorg.libXi xorg.libXrandr
 
     neofetch
+    cloc
     nnn # terminal file manager
 
     # browser
