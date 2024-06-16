@@ -123,6 +123,7 @@
     # Recording
     obs-studio
     audacity
+    shotcut
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
