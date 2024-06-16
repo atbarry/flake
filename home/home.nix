@@ -117,9 +117,12 @@
     noisetorch
     mangohud
     gamemode
-    obs-studio
     dolphin-emu
     dwarf-fortress
+
+    # Recording
+    obs-studio
+    audacity
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
