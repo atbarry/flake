@@ -76,7 +76,7 @@
     nnn # terminal file manager
 
     # browser
-    unstable.firefox
+    firefox
     google-chrome
     qbittorrent
 
@@ -120,10 +120,11 @@
     dolphin-emu
     dwarf-fortress
 
-    # Recording
+    # Recording / editing
     obs-studio
     audacity
     shotcut
+    kdenlive
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
