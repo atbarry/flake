@@ -44,6 +44,9 @@
     gpxsee
     qgis
 
+    # cargo packages
+    trunk
+
     # gpu stuff
     renderdoc
 
