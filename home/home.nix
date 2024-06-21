@@ -62,7 +62,7 @@
     gh # github cli
     gitkraken
     nodejs
-    awscli
+    awscli2
 
     neofetch
     cloc
