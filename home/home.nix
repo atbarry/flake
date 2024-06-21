@@ -44,6 +44,9 @@
     gpxsee
     qgis
 
+    # gpu stuff
+    renderdoc
+
     # custom packages
     nix-inspect
     supercell-wx
@@ -59,17 +62,7 @@
     gh # github cli
     gitkraken
     nodejs
-
-    # bevy dependencies
-    pkg-config
-    alsa-lib
-    alsa-utils
-    vulkan-loader
-    wayland
-    udev
-    libxkbcommon
-    libudev-zero
-    xorg.libX11 xorg.libXcursor xorg.libXi xorg.libXrandr
+    awscli
 
     neofetch
     cloc
@@ -149,10 +142,6 @@
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-output-monitor
-
-    # productivity
-    hugo # static site generator
-    glow # markdown previewer in terminal
 
     # Monitoring tools
     btop
