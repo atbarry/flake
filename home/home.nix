@@ -46,6 +46,7 @@
 
     # cargo packages
     trunk
+    typos
 
     # gpu stuff
     renderdoc
@@ -187,8 +188,6 @@
     '';
     shellAliases = {
       ls = "eza";
-      cd = "z";
-      cdi = "zi";
     };
   };
 
