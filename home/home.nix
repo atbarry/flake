@@ -149,7 +149,7 @@
 
     # Monitoring tools
     btop
-    nvtop
+    nvtopPackages.full
     sniffnet
 
     # system call monitoring
@@ -193,6 +193,9 @@
 
   programs.zoxide = {
     enable = true;
+    options = [
+      "--cmd cd"
+    ];
   };
 
   programs.eza = {
