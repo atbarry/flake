@@ -24,6 +24,13 @@
     auto-optimise-store = true;
   };
 
+  # Automitically clean up boot and old files
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
