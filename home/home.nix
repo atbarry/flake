@@ -184,7 +184,7 @@
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
-      cat "shell is working!"
+      set fish_greeting
     '';
     shellAliases = {
       ls = "eza";
