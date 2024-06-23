@@ -122,6 +122,7 @@
     audacity
     shotcut
     kdenlive
+    ffmpeg
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
