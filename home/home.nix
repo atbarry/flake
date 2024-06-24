@@ -47,6 +47,7 @@
     # cargo packages
     trunk
     typos
+    cargo-udeps
 
     # gpu stuff
     renderdoc
